@@ -2,7 +2,7 @@
 
 ## instalar
 
-* 1 - descargar el repositorio**
+* 1 - descargar el repositorio
 
 * 2 - npm install
 
