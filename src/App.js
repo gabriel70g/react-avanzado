@@ -1,17 +1,21 @@
-import React from 'react';
-import { ListOfCategories }  from './components/ListOfCategories'
-import { GlobalStyle } from './styles/GlobalStyles'
-import { ListOfPhotoCards } from './container/ListOfPhotoCards'
-import { Logo } from './components/Logo'
-
-export const App = () => (
-  <>
-  
-  <GlobalStyle />
-  <Logo />
-  <ListOfCategories />
-  <ListOfPhotoCards categoryId={2} />
-  </>
-)
- 
-
+import React from "react";
+import { GlobalStyle } from "./styles/GlobalStyles";
+import { Logo } from "./components/Logo";
+import { Detail } from "./pages/Detail";
+import { Home } from "./pages/Home";
+import { Router } from "@reach/router";
+import { NavBar } from './components/NavBar'
+export const App = () => {
+  return (
+    <div>
+      <GlobalStyle />
+      <Logo />
+      <Router>
+        <Home path="/" />
+        <Home path="/pet/:id" />
+        <Detail path="/detail/:detailId" />
+      </Router>
+      <NavBar />
+    </div>
+  );
+};
